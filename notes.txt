@@ -1,0 +1,28 @@
+I need to make a script that will recursively test and save all of the device pickles
+
+This needs to also increment the test size from 10% to 95% and rename save directories accordingly
+
+I can leave this running overnight and whatever.
+
+From the data I collect from this, I will be able to conclude my research over the past 6 months
+
+**check 450d7066ea25a4c08953187bc4d2c31d4c4922a0.pickle for chargePredict 10% sample results
+
+need to fix issues with days that don't have enough data
+fixed this issue by saving just the deviceID - no data
+so for every faulty day, there will still be a result pickle, but no useful data inside
+
+9/26 10:00pm-12:30am
+
+In Multithreading - if saving - need to add a check to the save path and not overwrite any
+previously tested devices (this will save loads of time)
+**this check will only be necessary if testing a directory
+***can add an option to override this if we want a clean test
+
+9/29 8:00am-11:00am
+10/1 9:00am-11:00am
+
+
+
+
+.
