@@ -22,7 +22,9 @@ previously tested devices (this will save loads of time)
 9/29 8:00am-11:00am
 10/1 9:00am-11:00am
 
-
+**rather than transferring the result pickles back and forth, 
+add a text file of all of the completed pickles 
+-- in the saveResults function, add appending the filename to a file named chargePredict10.txt or something
 
 
 .
