@@ -45,7 +45,8 @@ def main():
 					newFilenames.append(filename)
 				else:
 					print('Skipping '+str(filename)+' -- already in save path')
-			#for threading
+			#endfor
+			del skipIds
 			threadCount = 4
 
 			increment = int(len(newFilenames)/threadCount)
