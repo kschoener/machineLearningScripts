@@ -18,10 +18,13 @@ def main(path=None,testing=True, log=True, saveOverride=False, resultPath=None):
 	pickleData = predict.initialize(path=path)
 	#store the necessary data in the proper format
 	data = getData(pickleData)
+	del pickleData
 	#fit, predict, test, and save
 	(avgDifference, medianDifference, saveList) = predict.main(path,testing,data,log)
+	del data
 	if((saveOverride) or (resultPath!=None and input('Save results? y/n') == 'y')):
 		saveResults(saveList, resultPath)
+	del saveList
 #enddef main
 
 def saveResults(saveList, resultPath):
