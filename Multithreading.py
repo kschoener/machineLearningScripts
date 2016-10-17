@@ -38,16 +38,19 @@ def main():
 		# print('SkipIds = '+str(skipIds))
 		print('Length of skipIds = '+str(len(skipIds)))
 		print('A directory was given, going through all of the pickles in the directory')
+		skipSize = 0
 		for (dirpath, dirnames, filenames) in os.walk(picklePath):
 			newFilenames = []
 			for filename in filenames:
 				if(filename not in skipIds):
 					newFilenames.append(filename)
 				else:
-					print('Skipping '+str(filename)+' -- already in save path')
+					skipSize += 1
+					#print('Skipping '+str(filename)+' -- already in save path')
 			#endfor
 			del skipIds
-			threadCount = 4
+			print('Skipped '+str(skipSize)+' out of '+str(skipSize+len(newFilenames)))
+			threadCount = 2
 
 			increment = int(len(newFilenames)/threadCount)
 			previousIndex = 0
