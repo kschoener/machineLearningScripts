@@ -20,8 +20,6 @@ deviceId = None
 
 graphTitle = None
 
-formatType = 'charge'
-
 resultData = None
 
 testSize = None
@@ -58,7 +56,6 @@ def execute(args):
 	global deviceId
 	global save
 	global show
-	global formatType
 	global outputpath
 	global resultData
 	global graphTitle
@@ -68,10 +65,6 @@ def execute(args):
 	save = (args[-2] == 'save')
 	#if you want to see the graph
 	show = ('show' in args[1:])
-	#if the format is charge, else level
-	if('level' in args[1:]):
-		formatType = 'level'
-
 	#endif
 	if(save):
 		try:
