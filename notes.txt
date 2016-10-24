@@ -19,13 +19,12 @@ previously tested devices (this will save loads of time)
 **this check will only be necessary if testing a directory
 ***can add an option to override this if we want a clean test
 
-9/29 8:00am-11:00am
-10/1 9:00am-11:00am
-10/7 8:45pm-11:45pm
+9/29    8:00am-11:00am
+10/1    9:00am-11:00am
+10/7    8:45pm-11:45pm
+10/2    12:00am-4:00am
+10/24   12:00am-2:00am
 
 **rather than transferring the result pickles back and forth, 
 add a text file of all of the completed pickles 
 -- in the saveResults function, add appending the filename to a file named chargePredict10.txt or something
-
-
-.
