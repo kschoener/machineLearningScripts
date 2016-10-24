@@ -33,7 +33,7 @@ def saveResults(saveList, resultPath):
 	handle.close()
 #enddef saveResults
 
-#pickles: 
+#pickles:
 #‘2016-02-28 19:26:40.341018’ , ‘Charging//Discharging//Full’ , BatteryLevel
 # or
 #‘2016-02-28 19:26:40.341018’, 2 (charging)//3 (discharging)//5 (full) , BatteryLevel
@@ -62,7 +62,7 @@ def getData(pickleData):
 	# chargeEndLevel = None
 	for tup in (pickleData):
 		currentDay = (datetime.datetime.strptime(tup[0], '%Y-%m-%d %H:%M:%S.%f'))
-		
+
 		weekdayNum = int(currentDay.weekday())
 		dayType = None
 		if(weekdayNum == 6):
@@ -108,7 +108,7 @@ def getData(pickleData):
 	now that we have xData and chargeSessions, we need to put them together
 	xData -> [dayType, currentDatetime, batteryLevel]
 	chargeSessions -> chargeStartDatetime
-	currentDatetime needs to be converted to hour, minute OR timeInMinutes
+	currentDatetime needs to be converted to timeInMinutes
 	chargeStartDatetime needs to be converted to minutesToNextCharge
 	'''
 	for tup in xData:
